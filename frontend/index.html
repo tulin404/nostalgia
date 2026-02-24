@@ -1,12 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-primary min-h-dvh max-h-dvh overflow-clip">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300..700&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/nostalgia-logo.png"/>
     <link rel="stylesheet" href="/src/css/input.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="src/js/main.js"></script>
     <title>Nostalgia</title>
   </head>
-  <body>
+  <body class="flex justify-center items-center relative min-h-dvh max-h-dvh overflow-clip scrol">
+    <div id="header" class="absolute top-2 lg:top-4 w-full h-[20dvh] flex justify-center">
+      <img src="/nostalgia-logo.png" alt="" class="h-12 md:h-16">
+    </div>
+
+    <div class="border-text border-2 bg-secondary rounded-sm text-text px-8 py-6 lg:px-10 lg:py-8 text-center flex flex-col gap-6 md:gap-8">
+      
+      <h1 class="text-4xl lg:text-5xl font-['Press_Start_2P']">LOGIN</h1>      
+      <div id="login" class="flex flex-col gap-4 md:gap-6">
+        <div id="inputs-wrapper" class="flex flex-col justify-center items-center gap-2.5">
+          <div class="relative">
+            <input id="email-input" class="border-text bg-primary px-2.5 py-1.25 rounded-md outline-none" type="text">
+            <p id="email-txt" class="tracking-wide text-text-blur font-['Space_Grotesk'] absolute bottom-0 pointer-events-none px-2.5 py-1.25">Email</p>
+          </div>
+          <div class="relative">
+            <input id="pwd-input" class="border-text bg-primary px-2.5 py-1.25 rounded-md outline-none" type="text">
+            <p id="pwd-txt" class="tracking-wide text-text-blur font-['Space_Grotesk'] absolute bottom-0 pointer-events-none px-2.5 py-1.25">Senha</p>
+          </div>
+          <div class="self-center flex flex-col items-center justify-center mt-1 md:mt-3">
+            <button class="hover:cursor-pointer hover:bg-btn-secondary hover:scale-110 active:bg-btn-terciary active:scale-90  bg-btn rounded-sm transition-all duration-200 text-center font-['Teko'] tracking-wide text-3xl lg:text-4xl w-auto px-8 py-1.25">ENTRAR</button>
+          </div>
+        </div>
+        
+        <div id="no-acc" class="font-['Space_Grotesk'] text-sm">
+          <p>Esqueceu a senha? <a class="text-btn hover:cursor-pointer underline" href="">Mude-a aqui.</a></p>
+          <div id="wrapper" class="relative flex items-center justify-center">
+            <p id="or">ou</p>
+          </div>
+          <a href="" class="text-btn hover:cursor-pointer underline">Criar conta</a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div id="deco" class="absolute w-full h-8 md:h-10 bottom-0">
+      <img id="mario" src="/2d-mario-running.gif" alt="" class="animate-[run_5s_linear_infinite] md:animate-[run_8s_linear_infinite] -left-[50dvw] h-32 absolute bottom-8 md:bottom-10 md:h-40">
+    </div>
   </body>
 </html>

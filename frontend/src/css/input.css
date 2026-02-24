@@ -1,1 +1,46 @@
 @import "tailwindcss";
+
+@theme {
+    --color-primary: oklch(0.2009 0.0375 289.84);
+    --color-secondary: oklch(0.3009 0.0375 289.84);
+    --color-btn: oklch(0.5974 0.2301 285.53);
+    --color-btn-secondary: oklch(0.4974 0.2301 285.53);
+    --color-btn-terciary: oklch(0.3974 0.2301 285.53);
+    --color-text: oklch(0.9491 0.0142 74.42);
+    --color-text-blur: oklch(0.7491 0.0142 74.42);
+}
+
+#deco {
+    background: url('/mario-ground.png') repeat-x;
+}
+
+#header {
+    background: url('/cloud-back.png') repeat-x top;
+}
+
+#wrapper::after {
+    @apply bg-text rounded-xl -translate-y-1/2 top-1/2;
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 45%;
+    right: 0;
+}
+
+#wrapper::before {
+    @apply bg-text rounded-xl -translate-y-1/2 top-1/2;
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 45%;
+    left: 0;
+}
+
+
+@keyframes run {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(180dvw);
+    };
+}
