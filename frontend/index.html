@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bg-primary min-h-dvh max-h-dvh overflow-clip">
+<html lang="en" class="bg-primary min-h-dvh max-h-dvh overflow-clip transiton-all duration-200">
   <head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +16,38 @@
       <img src="/nostalgia-logo.png" alt="" class="h-12 md:h-16">
     </div>
 
-    <div class="border-text border-2 bg-secondary rounded-sm text-text px-8 py-6 lg:px-10 lg:py-8 text-center flex flex-col gap-6 md:gap-8">
+    <div id="register-full-wrapper" class="scale-0 absolute full-wrapper border-text border-2 bg-secondary rounded-sm text-text px-8 py-6 lg:px-10 lg:py-8 text-center flex flex-col gap-6 md:gap-8 transition-all duration-200">
       
-      <h1 class="text-4xl lg:text-5xl font-['Press_Start_2P']">LOGIN</h1>      
+      <h1 class="text-3xl lg:text-4xl font-['Press_Start_2P']">REGISTRO</h1>
+      <div id="login" class="flex flex-col gap-4 md:gap-6">
+        <div id="inputs-wrapper" class="flex flex-col justify-center items-center gap-2.5">
+          <div class="relative">
+            <input id="email-input" class="border-text bg-primary px-2.5 py-1.25 rounded-md outline-none" type="text">
+            <p id="email-txt" class="tracking-wide text-text-blur font-['Space_Grotesk'] absolute bottom-0 pointer-events-none px-2.5 py-1.25">Nome de Usuário</p>
+          </div>
+          <div class="relative">
+            <input id="pwd-input" class="border-text bg-primary px-2.5 py-1.25 rounded-md outline-none" type="text">
+            <p id="pwd-txt" class="tracking-wide text-text-blur font-['Space_Grotesk'] absolute bottom-0 pointer-events-none px-2.5 py-1.25">Email</p>
+          </div>
+          <div class="relative">
+            <input id="email-input" class="border-text bg-primary px-2.5 py-1.25 rounded-md outline-none" type="text">
+            <p id="email-txt" class="tracking-wide text-text-blur font-['Space_Grotesk'] absolute bottom-0 pointer-events-none px-2.5 py-1.25">Senha</p>
+          </div>
+          <div class="self-center flex flex-col items-center justify-center mt-1 md:mt-3">
+            <button class="hover:cursor-pointer hover:bg-btn-secondary hover:scale-110 active:bg-btn-terciary active:scale-90  bg-btn rounded-sm transition-all duration-200 text-center font-['Teko'] tracking-wide text-3xl lg:text-4xl w-auto px-8 py-1.25">CRIAR CONTA</button>
+          </div>
+          <div id="has-acc">
+            <p>Já tem uma conta? <button class="text-btn hover:cursor-pointer underline enter" href="">Entrar.</button></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div id="login-full-wrapper" class="absolute full-wrapper border-text border-2 bg-secondary rounded-sm text-text px-8 py-6 lg:px-10 lg:py-8 text-center flex flex-col gap-6 md:gap-8 transition-all duration-200">
+      
+      <h1 class="text-4xl lg:text-5xl font-['Press_Start_2P']">LOGIN</h1>
       <div id="login" class="flex flex-col gap-4 md:gap-6">
         <div id="inputs-wrapper" class="flex flex-col justify-center items-center gap-2.5">
           <div class="relative">
@@ -35,14 +64,34 @@
         </div>
         
         <div id="no-acc" class="font-['Space_Grotesk'] text-sm">
-          <p>Esqueceu a senha? <a class="text-btn hover:cursor-pointer underline" href="">Mude-a aqui.</a></p>
+          <p>Esqueceu a senha? <button class="text-btn hover:cursor-pointer underline change-pwd" id="change-pwd">Mude-a aqui.</button></p>
           <div id="wrapper" class="relative flex items-center justify-center">
             <p id="or">ou</p>
           </div>
-          <a href="" class="text-btn hover:cursor-pointer underline">Criar conta</a>
+          <button class="text-btn hover:cursor-pointer underline register">Criar conta</button>
         </div>
       </div>
       
+    </div>
+
+    <div id="forgot-full-wrapper" class="scale-0 absolute full-wrapper border-text border-2 bg-secondary rounded-sm text-text px-8 py-6 lg:px-10 lg:py-8 text-center flex flex-col gap-4 md:gap-6 transition-all duration-200">
+
+      <h1 class="text-xl lg:text-2xl font-['Press_Start_2P']">ESQUECEU SUA SENHA?</h1>
+       <div id="login" class="flex flex-col gap-4 md:gap-6">
+        <div id="inputs-wrapper" class="flex flex-col justify-center items-center gap-2.5">
+          <div class="relative">
+            <input id="email-input" class="border-text bg-primary px-3 py-1.5 rounded-md outline-none" type="text">
+            <p id="email-txt" class="text-lg tracking-wide text-text-blur font-['Space_Grotesk'] absolute bottom-0 pointer-events-none px-3 py-1.5">Email</p>
+          </div>
+          <div class="self-center flex flex-col items-center justify-center mt-1 md:mt-3">
+            <button class="hover:cursor-pointer hover:bg-btn-secondary hover:scale-110 active:bg-btn-terciary active:scale-90  bg-btn rounded-sm transition-all duration-200 text-center font-['Teko'] tracking-wide text-3xl lg:text-4xl w-auto px-8 py-1.25">ENVIAR CÓDIGO</button>
+          </div>
+        </div>
+        
+        <div id="no-acc" class="font-['Space_Grotesk'] text-sm">
+          <p>Tem senha? <button class="text-btn hover:cursor-pointer underline enter">Entrar.</button></p>
+        </div>
+      </div>
     </div>
 
     <div id="deco" class="absolute w-full h-8 md:h-10 bottom-0">
