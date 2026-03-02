@@ -1,22 +1,13 @@
-const emailInput = document.querySelector('#email-input');
-const emailTxt = document.querySelector('#email-txt');
-const pwdInput = document.querySelector('#pwd-input');
-const pwdTxt = document.querySelector('#pwd-txt');
-
-emailInput.addEventListener('input', () => {
-    if (emailInput.value.length > 0) {
-        emailTxt.classList.add('hidden');
-    } else {
-        emailTxt.classList.remove('hidden');
+window.addEventListener('input', (e) => {
+    if (e.target.classList.contains('input')) {
+        const text = e.target.nextElementSibling;
+        if (e.target.value.length > 0) {
+            text.classList.add('hidden');
+        } else {
+            text.classList.remove('hidden');
+        };
     };
-});
 
-pwdInput.addEventListener('input', () => {
-    if (pwdInput.value.length > 0) {
-        pwdTxt.classList.add('hidden');
-    } else {
-        pwdTxt.classList.remove('hidden');
-    };
 });
 
 const registerWrapper = document.getElementById('register-full-wrapper');

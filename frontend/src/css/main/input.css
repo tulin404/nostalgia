@@ -1,0 +1,82 @@
+/* MAIN */
+@import 'tailwindcss';
+
+@theme {
+    --color-primary: oklch(0.2009 0.0375 289.84);
+    --color-secondary: oklch(0.3009 0.0375 289.84);
+    --color-btn: oklch(0.5974 0.2301 285.53);
+    --color-btn-secondary: oklch(0.4974 0.2301 285.53);
+    --color-btn-terciary: oklch(0.3974 0.2301 285.53);
+    --color-text: oklch(0.9491 0.0142 74.42);
+    --color-text-blur: oklch(0.7491 0.0142 74.42);
+    --color-wood: oklch(0.4427 0.1164 46.6);
+    --color-write-wood: oklch(0.723 0.1473 54.22);
+};
+
+input {
+    @apply outline-none;
+}
+
+#header {
+    background: url('/cloud-back.png') repeat-x top;
+}
+
+.shelf-bottom {
+    background: url('/wood/wooden-tile.png');
+}
+
+.shelf-middle {
+    background: url('/wood/wooden-tile-dark.png');
+}
+
+.shelf-top {
+    background: url('/wood/wooden-tile-darker.png');
+    box-shadow: 0 32px 32px 32px black;
+}
+
+.shelf-feet {
+    background: url('/wood/wooden-tile-darker.png');
+    box-shadow: 0 0 32px black;
+}
+
+.shadow-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 16px;
+  background: black;
+  opacity: 0.4;
+  border-radius: 100%;
+}
+
+.shadow-wrapper:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 16px;
+  background: black;
+  opacity: 0.3;
+  border-radius: 100%;
+}
+
+.line {
+    background: url('/wood/wooden-tile-darker.png') center;
+}
+
+.shelf-middle {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+@keyframes moveSky {
+    from {
+        background-position: 0 0;
+    } to {
+        background-position: -1000px 0;
+    }
+}

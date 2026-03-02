@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-primary">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300..700&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/nostalgia-logo.png" type="image/png">
+    <title>Nostalgia</title>
+    <link rel="stylesheet" href="src/css/main/input.css">
+    <script defer src="src/js/main/animations.js"></script>
+</head>
+<body class="relative">
+    <div id="header" class="relative animate-[moveSky_linear_infinite_15s] w-full h-[20dvh] flex justify-center">
+        <img src="/nostalgia-logo.png" alt="" class="absolute top-1 h-16 md:h-20">
+    </div>
+    
+    <div id="wrapper" class="relative flex flex-col">
+        <div id="profile-wrapper" class="flex justify-center items-center">
+            <div id="frame" class="relative max-w-[90%] sm:max-w-[70%] md:max-w-[50%] flex justify-center items-center">
+                <img src="/wood/wooden-frame.png" alt="" class="relative max-h-auto">
+                <img src="/name.png" alt="" class="absolute z-100 -top-8 w-full">
+                <p class="md:text-3xl text-lg absolute font-['Press_Start_2P'] sm:top-2 lg:top-3 -top-1 z-1000">Name</p>
+                <p class="md:text-xl text-base absolute font-['Press_Start_2P'] sm:-top-2 lg:-top-3 -top-6 z-1000">Bem-vindo,</p>
+                <img src="/frame.png" alt="" class="absolute w-[40%] sm:w-[35%] z-100">
+                <img src="/pfp-crop.jpeg" alt="" class="absolute w-[40%] sm:w-[35%]">
+                <img id="pause" class="absolute pause h-8 sm:h-10 md:h-12 lg:right-32 right-12" src="/ui/pause.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <div id="item-edit-panel" class="absolute flex justify-center w-dvw h-dvh z-1000 top-28">
+        <img class="absolute w-[90dvw] sm:w-[70dvw] md:max-w-[50dvw]" src="/wood/wooden-frame.png" alt="">
+        <h1 class="absolute text-xl font-bold lg:text-3xl tracking-widest font-['Press_Start_2P'] top-8">Edição</h1>
+        <div class="flex flex-col gap-8 absolute top-26 md:top-32">
+            <div id="item-img-wrapper" class="relative flex items-center w-[80dvw] sm:w-[55dvw] md:max-w-[40dvw]">
+                <input class="peer px-3 py-1.5 md:px-5 md:py-2.5 bg-wood w-full rounded-sm" type="text">
+                <p class="peer-focus:opacity-0 absolute tracking-tighter px-3 py-1.5 pointer-events-none font-['Press_Start_2P'] md:text-xl text-write-wood">Imagem</p>
+            </div>
+            <div id="item-name-wrapper" class="relative flex items-center w-[80dvw] sm:w-[55dvw] md:max-w-[40dvw]">
+                <input class="peer px-3 py-1.5 md:px-5 md:py-2.5 bg-wood w-full rounded-sm" type="text">
+                <p class="peer-focus:opacity-0 absolute bg-transparent tracking-tighter px-3 py-1.5 pointer-events-none font-['Press_Start_2P'] lg:text-lg text-sm text-write-wood">Nome da memória</p>
+            </div>
+            
+        </div>
+    </div>
+
+   <div id="shelf-container" class="py-16">
+        <div class="shelf w-full py-12">
+            <div class="shelf-body">
+                <div class="shelf-top h-2 bg-center bg-repeat z-100"></div>
+                <div class="shelf-middle relative min-h-10 bg-center bg-repeat z-100 gap-8 grid">
+                    <div class="wrapper relative flex justify-center">
+                        <div title="Click to edit" class="shadow-wrapper transition-all duration-200 absolute -top-16 sm:-top-20">
+                            <img class="item-img h-24 sm:h-28 transition-all duration-200 hover:-translate-y-2" src="/mordecai.png" alt="">
+                            <div class="absolute right-1/2 translate-1/2 -top-16 ">
+                                <img class="pause pause-sec h-8 scale-0 transiton-all duration-200" src="/ui/pause.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper relative flex justify-center">
+                        <div class="shadow-wrapper transition-all duration-200 absolute -top-16 sm:-top-20">
+                            <img class="item-img h-24 sm:h-28 transition-all duration-200 hover:-translate-y-2" src="/mordecai.png" alt="">
+                            <div class="absolute right-1/2 translate-1/2 -top-16 ">
+                                <img class="pause pause-sec h-8 scale-0 transiton-all duration-200" src="/ui/pause.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper relative flex justify-center">
+                        <div class="shadow-wrapper transition-all duration-200 absolute -top-16 sm:-top-20">
+                            <img class="item-img h-24 sm:h-28 transition-all duration-200 hover:-translate-y-2" src="/mordecai.png" alt="">
+                            <div class="absolute right-1/2 translate-1/2 -top-16 ">
+                                <img class="pause pause-sec h-8 scale-0 transiton-all duration-200" src="/ui/pause.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-1.5 line"> </div>
+                <div class="shelf-bottom h-9 bg-center bg-repeat z-100"></div>
+            </div>
+            <div class="shelf-feet-container flex justify-between px-6">
+                <div class="shelf-feet h-12 w-12 bg-center"></div>
+                <div class="shelf-feet h-12 w-12 bg-center"></div>
+            </div>
+        </div>
+    </div>
+    <div id="shelf-container" class="py-16">
+        <div class="shelf w-full py-12">
+            <div class="shelf-body">
+                <div class="shelf-top h-2 bg-center bg-repeat z-100"></div>
+                <div class="shelf-middle relative min-h-10 bg-center bg-repeat z-100 gap-8 grid">
+                    <div class="wrapper relative flex justify-center">
+                        <div class="shadow-wrapper transition-all duration-200 absolute -top-16 sm:-top-20">
+                            <img class="item-img h-24 sm:h-28 transition-all duration-200 hover:-translate-y-2" src="/mordecai.png" alt="">
+                            <div class="absolute right-1/2 translate-1/2 -top-16 ">
+                                <img class="pause pause-sec h-8 scale-0 transiton-all duration-200" src="/ui/pause.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper relative flex justify-center">
+                        <div class="shadow-wrapper transition-all duration-200 absolute -top-16 sm:-top-20">
+                            <img class="item-img h-24 sm:h-28 transition-all duration-200 hover:-translate-y-2" src="/mordecai.png" alt="">
+                            <div class="absolute right-1/2 translate-1/2 -top-16 ">
+                                <img class="pause pause-sec h-8 scale-0 transiton-all duration-200" src="/ui/pause.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper relative flex justify-center">
+                        <div class="shadow-wrapper transition-all duration-200 absolute -top-16 sm:-top-20">
+                            <img class="item-img h-24 sm:h-28 transition-all duration-200 hover:-translate-y-2" src="/mordecai.png" alt="">
+                            <div class="absolute right-1/2 translate-1/2 -top-16 ">
+                                <img class="pause pause-sec h-8 scale-0 transiton-all duration-200" src="/ui/pause.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-1.5 line"> </div>
+                <div class="shelf-bottom h-9 bg-center bg-repeat z-100"></div>
+            </div>
+            <div class="shelf-feet-container flex justify-between px-6">
+                <div class="shelf-feet h-12 w-12 bg-center"></div>
+                <div class="shelf-feet h-12 w-12 bg-center"></div>
+            </div>
+        </div>
+    </div>
+</body></div>
+</html>
