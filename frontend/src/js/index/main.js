@@ -4,19 +4,23 @@ const usernameInput = document.getElementById('username_i');
 const emailInput = document.getElementById('email_i');
 const pwdInput = document.getElementById('pwd_i');
 
-createAccBtn.addEventListener('click', () => {
+createAccBtn.addEventListener('click', async () => {
     try {
-        fetch(`${import.meta.env.VITE_API_URL}/auth/register`, {
-            mehtod: POST,
+        const res = fetch(`${import.meta.env.VITE_API_URL}/auth/register`, {
+            mehtod: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: {
+            body: JSON.stringify({
                 username: usernameInput.value,
                 email: emailInput.value,
                 password: pwdInput.value
-            }
+            })
         });
+        const data = await res.json();
+        if (!res.ok) {
+            
+        };
     } catch(error) {
         console.log(`Erro no frontend: ${error}`);
     } finally {
