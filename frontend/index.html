@@ -16,21 +16,29 @@
       <img src="/nostalgia-logo.png" alt="" class="top-1 h-16 md:h-20">
     </div>
 
+    <div id="loading" class="fixed">
+
+    </div>
+
     <div id="register-full-wrapper" class="scale-0 absolute full-wrapper border-text border-2 bg-secondary rounded-sm text-text px-8 py-6 lg:px-10 lg:py-8 text-center flex flex-col gap-6 md:gap-8 transition-all duration-200">
       
       <h1 class="text-3xl lg:text-4xl font-['Press_Start_2P']">REGISTRO</h1>
       <div id="login" class="flex flex-col gap-4 md:gap-6">
         <div id="inputs-wrapper" class="flex flex-col justify-center items-center gap-2.5">
           <div class="relative">
-            <input class="input border-text bg-primary px-2.5 py-1.25 rounded-md " type="text">
+            <input id="username_i" class="input border-text bg-primary px-2.5 py-1.25 rounded-md " type="text">
             <p class="txt tracking-wide text-text-blur font-['Space_Grotesk'] absolute bottom-0 pointer-events-none px-2.5 py-1.25">Nome de Usuário</p>
           </div>
           <div class="relative">
-            <input class="input border-text bg-primary px-2.5 py-1.25 rounded-md " type="text">
+            <input id="email_i" class="input border-text bg-primary px-2.5 py-1.25 rounded-md " type="text">
             <p class="txt tracking-wide text-text-blur font-['Space_Grotesk'] absolute bottom-0 pointer-events-none px-2.5 py-1.25">Email</p>
           </div>
+          <div class="relative">
+            <input id="pwd_i" class="input border-text bg-primary px-2.5 py-1.25 rounded-md " type="text">
+            <p class="txt tracking-wide text-text-blur font-['Space_Grotesk'] absolute bottom-0 pointer-events-none px-2.5 py-1.25">Senha</p>
+          </div>
           <div class="self-center flex flex-col items-center justify-center mt-1 md:mt-3">
-            <button class="hover:cursor-pointer hover:bg-btn-secondary hover:scale-110 active:bg-btn-terciary active:scale-90  bg-btn rounded-sm transition-all duration-200 text-center font-['Teko'] tracking-wide text-3xl lg:text-4xl w-auto px-8 py-1.25">CRIAR CONTA</button>
+            <button id="create-acc" class="hover:cursor-pointer hover:bg-btn-secondary hover:scale-110 active:bg-btn-terciary active:scale-90  bg-btn rounded-sm transition-all duration-200 text-center font-['Teko'] tracking-wide text-3xl lg:text-4xl w-auto px-8 py-1.25">CRIAR CONTA</button>
           </div>
           <div id="has-acc">
             <p>Já tem uma conta? <button class="text-btn hover:cursor-pointer underline enter" href="">Entrar.</button></p>
