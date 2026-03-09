@@ -5,10 +5,10 @@ export default async function authMiddleware(req, res, next) {
     const authHeader = req.headers.authorization;
 
     if (!authHeader) {
-        return res.status(401).json({ error: 'No authorization header.' });
+        return res.status(400).json({ error: 'No authorization header.' });
     };
     if (!authHeader.startsWith("Bearer ")) {
-        return res.status(401).json({ error: 'Incorrect auth type.' })
+        return res.status(400).json({ error: 'Incorrect auth type.' })
     };
 
     const token = authHeader.split(" ")[1];
